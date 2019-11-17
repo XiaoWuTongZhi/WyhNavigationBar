@@ -9,8 +9,8 @@
 #import "WyhNavigationBar.h"
 #import <Masonry/Masonry.h>
 
-static CGFloat navigationBarHeight = 44.f;
-
+static CGFloat kNavigationBarHeight = 0.f;
+static CGFloat kStatusBarHeight = 0.f;
 
 @interface WyhNavigationBar ()
 
@@ -24,8 +24,16 @@ static CGFloat navigationBarHeight = 44.f;
 
 @implementation WyhNavigationBar
 
++ (void)initialize {
+    UINavigationController *navi = [[UINavigationController alloc]init];
+    kNavigationBarHeight = navi.navigationBar.frame.size.height;
+    
+    kStatusBarHeight = UIApplication.sharedApplication.statusBarFrame.size.height;
+}
+
 + (instancetype)navigationBar {
-    WyhNavigationBar *navi = [[WyhNavigationBar alloc]initWithFrame:CGRectMake(0, UIApplication.sharedApplication.statusBarFrame.size.height, [UIScreen mainScreen].bounds.size.width, navigationBarHeight)];
+    
+    WyhNavigationBar *navi = [[WyhNavigationBar alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, kNavigationBarHeight + kStatusBarHeight)];
     return navi;
 }
 
@@ -41,9 +49,13 @@ static CGFloat navigationBarHeight = 44.f;
 - (void)configUI {
     
     _naviBar = ({
-        UIView *naviBar = [[UIView alloc]initWithFrame:self.bounds];
+        UIView *naviBar = [[UIView alloc]init];
         naviBar.backgroundColor = [UIColor whiteColor];
         [self addSubview:naviBar];
+        [naviBar mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.mas_top).offset(kStatusBarHeight);
+            make.left.right.bottom.equalTo(self);            
+        }];
         naviBar;
     });
     

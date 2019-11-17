@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		09CC906B11BE3674A598ADEE /* WyhNavigationBar.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = WyhNavigationBar.podspec; path = ../WyhNavigationBar.podspec; sourceTree = "<group>"; };
+		09CC906B11BE3674A598ADEE /* WyhNavigationBar.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WyhNavigationBar.podspec; path = ../WyhNavigationBar.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		0C0DD24D0F8899F03B313F79 /* Pods-WyhNavigationBar_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WyhNavigationBar_Tests.release.xcconfig"; path = "Target Support Files/Pods-WyhNavigationBar_Tests/Pods-WyhNavigationBar_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		29AEFBCED037E09B3CE39175 /* Pods_WyhNavigationBar_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WyhNavigationBar_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B2702FD000F95EBE96DB1E4 /* Pods-WyhNavigationBar_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WyhNavigationBar_Example.release.xcconfig"; path = "Target Support Files/Pods-WyhNavigationBar_Example/Pods-WyhNavigationBar_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,8 +65,8 @@
 		803D78025A8E6B0DA5BECF7D /* Pods_WyhNavigationBar_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WyhNavigationBar_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B1DB506A5E5955A1FCB9BC1 /* Pods-WyhNavigationBar_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WyhNavigationBar_Example.debug.xcconfig"; path = "Target Support Files/Pods-WyhNavigationBar_Example/Pods-WyhNavigationBar_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		C9DC32AA7A44BAD57445756C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		E4B0113147D2EC7ACF660465 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		C9DC32AA7A44BAD57445756C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E4B0113147D2EC7ACF660465 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +193,6 @@
 				5717E62CEF7CE2D6FA7E9A9F /* Pods-WyhNavigationBar_Tests.debug.xcconfig */,
 				0C0DD24D0F8899F03B313F79 /* Pods-WyhNavigationBar_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -258,6 +257,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
