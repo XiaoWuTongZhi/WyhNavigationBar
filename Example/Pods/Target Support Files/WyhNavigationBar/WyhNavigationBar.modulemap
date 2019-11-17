@@ -1,0 +1,6 @@
+framework module WyhNavigationBar {
+  umbrella header "WyhNavigationBar-umbrella.h"
+
+  export *
+  module * { export * }
+}

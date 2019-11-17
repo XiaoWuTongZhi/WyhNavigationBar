@@ -1,0 +1,27 @@
+{
+  "name": "WyhNavigationBar",
+  "version": "0.1.0",
+  "summary": "A short description of WyhNavigationBar.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/609223770@qq.com/WyhNavigationBar",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "609223770@qq.com": "609223770@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/609223770@qq.com/WyhNavigationBar.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "WyhNavigationBar/Classes/**/*",
+  "dependencies": {
+    "Masonry": [
+
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+PODS:
+  - Masonry (1.1.0)
+  - WyhNavigationBar (0.1.0):
+    - Masonry
+
+DEPENDENCIES:
+  - WyhNavigationBar (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Masonry
+
+EXTERNAL SOURCES:
+  WyhNavigationBar:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  WyhNavigationBar: 34313db25f03dd86695a7678b2ecb26cf8fee005
+
+PODFILE CHECKSUM: 90d3a875924382e544984a3ae95ff8b31faac541
+
+COCOAPODS: 1.8.4
