@@ -8,6 +8,7 @@
 
 #import "WYHViewController.h"
 #import <WyhNavigationBar.h>
+#import <Masonry/Masonry.h>
 
 @interface WYHViewController () <WyhNavigationBarDataSource>
 
@@ -27,7 +28,12 @@
     naviBar.leftBarItems = @[leftItem];
     naviBar.rightBarItems = @[rightItem];
     naviBar.title = @"TEST";
+    naviBar.isShowBottomLine = NO;
     [self.view addSubview:naviBar];
+    [naviBar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.right.equalTo(self.view);
+        make.height.offset(naviBar.bounds.size.height);
+    }];
 //    [naviBar reload];
     
 }

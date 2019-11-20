@@ -9,6 +9,8 @@
 #import "WyhNavigationBar.h"
 #import <Masonry/Masonry.h>
 
+#define kRGBHex(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
 static CGFloat kNavigationBarHeight = 0.f;
 static CGFloat kStatusBarHeight = 0.f;
 
@@ -19,6 +21,8 @@ static CGFloat kStatusBarHeight = 0.f;
 @property (nonatomic, strong) UIView *naviBar;
 
 @property (nonatomic, strong) UILabel *titleLabel;
+
+@property (nonatomic, strong) UIView *bottomLineView;
 
 @end
 
@@ -42,6 +46,15 @@ static CGFloat kStatusBarHeight = 0.f;
         [self configUI];
     }
     return self;
+}
+
+- (void)setIsShowBottomLine:(BOOL)isShowBottomLine {
+    _isShowBottomLine = isShowBottomLine;
+    if (isShowBottomLine) {
+        _bottomLineView.hidden = NO;
+    }else {
+        _bottomLineView.hidden = YES;
+    }
 }
 
 #pragma mark - UI
@@ -81,6 +94,16 @@ static CGFloat kStatusBarHeight = 0.f;
         label;
     });
     
+    _bottomLineView = ({
+        UIView *line = [[UIView alloc]init];
+        line.backgroundColor = kRGBHex(0xc8c8c8);
+        [self addSubview:line];
+        [line mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.bottom.left.right.equalTo(self);
+            make.height.offset(1.f);
+        }];
+        line;
+    });
 }
 
 #pragma mark - Api
