@@ -24,11 +24,12 @@
     WyhNavigationBar *naviBar = [WyhNavigationBar navigationBar];
 //    naviBar.dataSource = self;
     WyhNavigationBarItem *leftItem = [[WyhNavigationBarItem alloc]initWithTitle:@"Left" addTarget:self action:@selector(unknown:)];
-    WyhNavigationBarItem *rightItem = [[WyhNavigationBarItem alloc]initWithTitle:@"Right" addTarget:self action:@selector(unknown:)];
+    WyhNavigationBarItem *rightItem1 = [[WyhNavigationBarItem alloc]initWithTitle:@"Right1" addTarget:self action:@selector(unknown:)];
+    WyhNavigationBarItem *rightItem2 = [[WyhNavigationBarItem alloc]initWithTitle:@"Right2" addTarget:self action:@selector(unknown:)];
     naviBar.leftBarItems = @[leftItem];
-    naviBar.rightBarItems = @[rightItem];
-    naviBar.title = @"TEST";
-    naviBar.isShowBottomLine = NO;
+    naviBar.rightBarItems = @[rightItem1,rightItem2];
+    naviBar.title = @"TESTSDFKSLJALKJDLAJDADJAJD";
+    
     [self.view addSubview:naviBar];
     [naviBar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.equalTo(self.view);

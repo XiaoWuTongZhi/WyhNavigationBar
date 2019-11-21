@@ -76,8 +76,8 @@ static CGFloat kStatusBarHeight = 0.f;
         UIView *view = [[UIView alloc]init];
         [_naviBar addSubview:view];
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(_naviBar.mas_left).offset(40.f);
-            make.right.equalTo(_naviBar.mas_right).offset(-40.f);
+            make.left.equalTo(_naviBar.mas_left).offset(100.f);
+            make.right.equalTo(_naviBar.mas_right).offset(-100.f);
             make.top.bottom.equalTo(_naviBar);
         }];
         view;
@@ -119,12 +119,14 @@ static CGFloat kStatusBarHeight = 0.f;
     [self.leftBarItems makeObjectsPerformSelector:@selector(removeFromSuperview)];
     _leftBarItems = leftBarItems;
     [self reloadLeftBarItems];
+    [self reloadTitleView];
 }
 
 - (void)setRightBarItems:(NSArray<WyhNavigationBarItem *> *)rightBarItems {
     [self.rightBarItems makeObjectsPerformSelector:@selector(removeFromSuperview)];
     _rightBarItems = rightBarItems;
     [self reloadRightBarItems];
+    [self reloadTitleView];
 }
 
 - (void)reload {
@@ -145,20 +147,24 @@ static CGFloat kStatusBarHeight = 0.f;
         _titleView = [self.dataSource navigationBarCustomTitleViewWithNavigationBar:self];
         [_naviBar addSubview:_titleView];
     }
+    [_naviBar setNeedsLayout];
+    [_naviBar layoutIfNeeded];
+    
+    CGFloat maxMarginOffset = 100.f;
+    if (_leftBarItems.count || _rightBarItems.count) {
+        if (_leftBarItems.count > _rightBarItems.count) {
+            maxMarginOffset = CGRectGetMaxX(_leftBarItems.lastObject.frame) + 15.f;
+        }else {
+            maxMarginOffset = _naviBar.bounds.size.width - CGRectGetMinX(_rightBarItems.lastObject.frame) + 15.f;
+        }
+    }
+    
     [_titleView mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_naviBar.mas_top);
-        make.bottom.equalTo(_naviBar.mas_bottom);
-        if (self.leftBarItems.lastObject) {
-            make.left.equalTo(self.leftBarItems.lastObject.mas_right).offset(10.f);
-        }else {
-            make.left.equalTo(_naviBar.mas_left).offset(40.f);
-        }
-        if (self.rightBarItems.lastObject) {
-            make.right.equalTo(self.rightBarItems.lastObject.mas_left).offset(-10.f);
-        }else {
-            make.right.equalTo(_naviBar.mas_right).offset(-40.f);
-        }
+        make.top.bottom.equalTo(_naviBar);
+        make.left.equalTo(_naviBar.mas_left).offset(maxMarginOffset);
+        make.right.equalTo(_naviBar.mas_right).offset(-maxMarginOffset);
     }];
+    
 }
 
 - (void)reloadLeftBarItems {
