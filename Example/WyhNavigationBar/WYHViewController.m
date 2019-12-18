@@ -33,9 +33,10 @@
     [self.view addSubview:naviBar];
     [naviBar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.equalTo(self.view);
-        make.height.offset(naviBar.bounds.size.height);
+        make.height.offset(WyhNavigationBar.barHeight);
     }];
-//    [naviBar reload];
+    
+    
     
 }
 

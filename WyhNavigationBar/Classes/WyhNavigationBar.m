@@ -31,18 +31,22 @@ static CGFloat kStatusBarHeight = 0.f;
 + (void)initialize {
     UINavigationController *navi = [[UINavigationController alloc]init];
     kNavigationBarHeight = navi.navigationBar.frame.size.height;
-    
     kStatusBarHeight = UIApplication.sharedApplication.statusBarFrame.size.height;
+    
 }
 
-+ (instancetype)navigationBar {
-    
-    WyhNavigationBar *navi = [[WyhNavigationBar alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, kNavigationBarHeight + kStatusBarHeight)];
++ (CGFloat)barHeight {
+    return kNavigationBarHeight + kStatusBarHeight;
+}
+
++ (instancetype)navigationBar {    
+    WyhNavigationBar *navi = [[WyhNavigationBar alloc]init];
+    [navi configUI];
     return navi;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:frame]) {
+    if (self = [super initWithFrame:frame]) {        
         [self configUI];
     }
     return self;

@@ -18,7 +18,6 @@
 
 @end
 
-
 @interface WyhNavigationBar : UIView
 
 @property (nonatomic, weak) id<WyhNavigationBarDataSource> dataSource;
@@ -40,6 +39,8 @@
 @property (nonatomic, strong, readonly) UIView *bottomLineView;
 
 + (instancetype)navigationBar;
+
++ (CGFloat)barHeight;
 
 - (void)reload;
 

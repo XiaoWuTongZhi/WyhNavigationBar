@@ -248,7 +248,7 @@
 				ORGANIZATIONNAME = "609223770@qq.com";
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = 29HA8N9RQ5;
+						DevelopmentTeam = FUAH8HMK9E;
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -499,7 +499,7 @@
 			baseConfigurationReference = 8B1DB506A5E5955A1FCB9BC1 /* Pods-WyhNavigationBar_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 29HA8N9RQ5;
+				DEVELOPMENT_TEAM = FUAH8HMK9E;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WyhNavigationBar/WyhNavigationBar-Prefix.pch";
 				INFOPLIST_FILE = "WyhNavigationBar/WyhNavigationBar-Info.plist";
@@ -516,7 +516,7 @@
 			baseConfigurationReference = 3B2702FD000F95EBE96DB1E4 /* Pods-WyhNavigationBar_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 29HA8N9RQ5;
+				DEVELOPMENT_TEAM = FUAH8HMK9E;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WyhNavigationBar/WyhNavigationBar-Prefix.pch";
 				INFOPLIST_FILE = "WyhNavigationBar/WyhNavigationBar-Info.plist";

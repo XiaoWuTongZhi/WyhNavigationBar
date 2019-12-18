@@ -1,9 +1,9 @@
 {
   "name": "WyhNavigationBar",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "summary": "A short description of WyhNavigationBar.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/609223770@qq.com/WyhNavigationBar",
+  "homepage": "https://github.com/XiaoWuTongZhi/WyhNavigationBar",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,8 +12,8 @@
     "609223770@qq.com": "609223770@qq.com"
   },
   "source": {
-    "git": "https://github.com/609223770@qq.com/WyhNavigationBar.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/XiaoWuTongZhi/WyhNavigationBar.git",
+    "tag": "0.1.2"
   },
   "platforms": {
     "ios": "8.0"

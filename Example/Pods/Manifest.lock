@@ -1,6 +1,6 @@
 PODS:
   - Masonry (1.1.0)
-  - WyhNavigationBar (0.1.0):
+  - WyhNavigationBar (0.1.2):
     - Masonry
 
 DEPENDENCIES:
@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  WyhNavigationBar: 34313db25f03dd86695a7678b2ecb26cf8fee005
+  WyhNavigationBar: 56bd90a2bf4d67c9790ab5254f28ca4570eaf364
 
 PODFILE CHECKSUM: 90d3a875924382e544984a3ae95ff8b31faac541
 
