@@ -36,7 +36,7 @@ static CGFloat kStatusBarHeight = 0.f;
 }
 
 + (CGFloat)barHeight {
-    return kNavigationBarHeight + kStatusBarHeight;
+    return kNavigationBarHeight;
 }
 
 + (instancetype)navigationBar {    
@@ -70,7 +70,7 @@ static CGFloat kStatusBarHeight = 0.f;
         naviBar.backgroundColor = [UIColor whiteColor];
         [self addSubview:naviBar];
         [naviBar mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.mas_top).offset(kStatusBarHeight);
+            make.top.equalTo(self.mas_top);
             make.left.right.bottom.equalTo(self);            
         }];
         naviBar;
